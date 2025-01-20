@@ -1,0 +1,1 @@
+Exploring data structures such as lists, tuples and more in addition to manipulating them.
