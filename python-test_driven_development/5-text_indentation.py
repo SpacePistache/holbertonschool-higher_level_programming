@@ -1,27 +1,24 @@
 #!/usr/bin/python3
 """
-This module provides a function to format text by adding line breaks
-after specific punctuation characters.
+Module provides a function to process and print text with specific formatting.
 
-The text_indentation function processes input text, adding two newline
-characters after periods, question marks, and colons while removing
-unnecessary whitespace.
+The text_indentation function handles text printing with precise spacing
+and punctuation-based line breaks, ensuring clean and consistent output.
 """
 
 
 def text_indentation(text):
     """
-    Print text with line breaks after specific punctuation characters.
+    Print text with specific formatting rules.
 
     Args:
-        text (str): The input text to be formatted.
+        text (str): The input text to be processed and printed.
 
     Raises:
         TypeError: If the input is not a string.
 
     Prints:
-        Formatted text with two newlines after '.', '?', and ':',
-        with no leading or trailing whitespace on each line.
+        Formatted text with controlled spacing and line breaks.
     """
     # Validate input is a string
     if not isinstance(text, str):
@@ -30,20 +27,21 @@ def text_indentation(text):
     # Special punctuation characters that trigger line breaks
     special_chars = '.?:'
 
-    # Process the text
-    processed_text = ""
+    # Flag to track if we need to skip leading spaces
+    skip_spaces = True
+
+    # Process and print the text
     for char in text:
-        processed_text += char
+        if char == ' ' and skip_spaces:
+            continue
 
-        # Add two newlines after special characters
+        # Reset skip_spaces flag when non-space character is encountered
+        skip_spaces = False
+
+        # Print the character
+        print(char, end='')
+
+        # Add line breaks after special characters
         if char in special_chars:
-            processed_text += "\n\n"
-
-    # Split lines and strip whitespace
-    lines = processed_text.split('\n')
-
-    # Print non-empty lines after stripping whitespace
-    for line in lines:
-        print(line.strip(), end='')
-        if line.strip():
-            print()
+            print('\n')
+            skip_spaces = True
