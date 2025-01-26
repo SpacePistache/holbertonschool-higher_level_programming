@@ -7,6 +7,10 @@ Using text_indentation function
 Import the function:
     >>> text_indentation = __import__('5-text_indentation').text_indentation
 
+Basic usage with a simple string:
+    >>> text_indentation("Holberton School")
+    Holberton School
+
 Basic usage with different punctuation:
     >>> text_indentation("Hello. World? How are you:")
     Hello.
@@ -40,10 +44,6 @@ Text with leading and trailing spaces:
 
 Empty string:
     >>> text_indentation("")
-
-No punctuation:
-    >>> text_indentation("Hello World")
-    Hello World
 
 Error handling for non-string input:
     >>> text_indentation(12)
