@@ -2,9 +2,9 @@
 """
 This module provides a function to divide all elements of a matrix.
 
-The matrix_divided function takes a matrix (list of lists) and a divisor,
-then returns a new matrix with all elements divided by the divisor,
-rounded to two decimal places. It includes comprehensive input validation
+The matrix_divided function takes a matrix (list of lists) and a divisor, 
+then returns a new matrix with all elements divided by the divisor, 
+rounded to two decimal places. It includes comprehensive input validation 
 to ensure the matrix and divisor meet specific criteria.
 """
 
@@ -25,6 +25,7 @@ def matrix_divided(matrix, div):
     Returns:
         list: A new matrix with elements divided by div and rounded to 2 decimal places.
     """
+
     if not isinstance(matrix, list) or not all(isinstance(row, list) for row in matrix):
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
 
