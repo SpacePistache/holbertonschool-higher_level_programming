@@ -24,6 +24,16 @@ Division by infinity:
     >>> matrix_divided([[1, 2, 3], [4, 5, 6]], float('inf'))
     [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
 
+Error handling for missing arguments:
+    >>> matrix_divided()
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+Error handling for missing one argument:
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]])
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
 Error handling for non-matrix input:
     >>> matrix_divided("not a matrix", 3)
     Traceback (most recent call last):

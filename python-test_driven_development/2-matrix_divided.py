@@ -2,14 +2,14 @@
 """
 This module provides a function to divide all elements of a matrix.
 
-The matrix_divided function takes a matrix (list of lists) and a divisor, 
-then returns a new matrix with all elements divided by the divisor, 
-rounded to two decimal places. It includes comprehensive input validation 
+The matrix_divided function takes a matrix (list of lists) and a divisor,
+then returns a new matrix with all elements divided by the divisor,
+rounded to two decimal places. It includes comprehensive input validation
 to ensure the matrix and divisor meet specific criteria.
 """
 
 
-def matrix_divided(matrix, div):
+def matrix_divided(matrix=None, div=None):
     """
     Divide all elements of a matrix by a given number.
 
@@ -19,12 +19,15 @@ def matrix_divided(matrix, div):
 
     Raises:
         TypeError: If matrix is not a list of lists of numbers,
-                   if rows have different sizes, or if div is not a number.
+                   if rows have different sizes, if div is not a number,
+                   or if arguments are missing.
         ZeroDivisionError: If div is zero.
 
     Returns:
         list: A new matrix with elements divided by div and rounded to 2 decimal places.
     """
+    if matrix is None or div is None:
+        raise TypeError("matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'")
 
     if not isinstance(matrix, list) or not all(isinstance(row, list) for row in matrix):
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
