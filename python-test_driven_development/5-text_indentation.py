@@ -1,27 +1,49 @@
 #!/usr/bin/python3
+"""
+This module provides a function to format text by adding line breaks
+after specific punctuation characters.
+
+The text_indentation function processes input text, adding two newline
+characters after periods, question marks, and colons while removing
+unnecessary whitespace.
+"""
+
+
 def text_indentation(text):
     """
-    Function prints text with two new lines after: `.`, `?`, and `:`.
-    Text processed without leading/trailing spaces after each printed line.
+    Print text with line breaks after specific punctuation characters.
 
     Args:
-    text (str): The input string to be processed.
+        text (str): The input text to be formatted.
 
     Raises:
-    TypeError: If `text` is not a string.
-    """
+        TypeError: If the input is not a string.
 
+    Prints:
+        Formatted text with two newlines after '.', '?', and ':',
+        with no leading or trailing whitespace on each line.
+    """
+    # Validate input is a string
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    # We will loop through the text and print accordingly
-    i = 0
-    while i < len(text):
-        if text[i] in ['.', '?', ':']:  # Check if the character is one of the target ones
-            print(text[i].strip())  # Print the character itself, then add two newlines
-            print()  # Add the first newline
-            print()  # Add the second newline
-            i += 1  # Move to the next character
-        else:
-            print(text[i], end="")  # Print the character without new line
-            i += 1  # Move to the next character
+    # Special punctuation characters that trigger line breaks
+    special_chars = '.?:'
+
+    # Process the text
+    processed_text = ""
+    for char in text:
+        processed_text += char
+
+        # Add two newlines after special characters
+        if char in special_chars:
+            processed_text += "\n\n"
+
+    # Split lines and strip whitespace
+    lines = processed_text.split('\n')
+
+    # Print non-empty lines after stripping whitespace
+    for line in lines:
+        print(line.strip(), end='')
+        if line.strip():
+            print()
