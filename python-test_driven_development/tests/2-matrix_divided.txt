@@ -1,7 +1,10 @@
 >>> import importlib
->>> matrix_divided = importlib.import_module('2-matrix_divided').matrix_divided
+>>> matrix_divided = importlib.import_module('matrix_divided').matrix_divided
+
 This is a set of doctests for the matrix_divided function.
 
+>>> import importlib
+>>> matrix_divided = importlib.import_module('matrix_divided').matrix_divided
 >>> matrix_divided([[1, 2], [3, 4]], 2)
 [[0.5, 1.0], [1.5, 2.0]]
 
