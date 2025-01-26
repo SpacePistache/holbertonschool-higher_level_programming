@@ -1,0 +1,53 @@
+The 5-text_indentation module
+===========================
+
+Using text_indentation function
+----------------------------
+
+Import the function:
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Basic usage with different punctuation:
+    >>> text_indentation("Hello. World? How are you:")
+    Hello.
+    <BLANKLINE>
+    World?
+    <BLANKLINE>
+    How are you:
+    <BLANKLINE>
+
+Text with multiple special characters:
+    >>> text_indentation("Hello. World? How are: you.")
+    Hello.
+    <BLANKLINE>
+    World?
+    <BLANKLINE>
+    How are:
+    <BLANKLINE>
+    you.
+    <BLANKLINE>
+
+Text with leading and trailing spaces:
+    >>> text_indentation("  Hello.   World?  How are:   you.  ")
+    Hello.
+    <BLANKLINE>
+    World?
+    <BLANKLINE>
+    How are:
+    <BLANKLINE>
+    you.
+    <BLANKLINE>
+
+Empty string:
+    >>> text_indentation("")
+
+No punctuation:
+    >>> text_indentation("Hello World")
+    Hello World
+
+Error handling for non-string input:
+    >>> text_indentation(12)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation(None)
