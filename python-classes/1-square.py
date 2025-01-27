@@ -5,8 +5,9 @@
 class Square:
     """ A class for a square """
 
-    def __init__(self):
+    def __init__(self, size):
         __size = None
+        self.__size = size
 
 
 pass
