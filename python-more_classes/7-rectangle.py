@@ -4,8 +4,8 @@
 
 class Rectangle:
     """ A class that defines a rectangle. """
-
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """
@@ -93,7 +93,7 @@ class Rectangle:
     def __str__(self):
         """
         Return a string representation of the rectangle
-        using the '#' character.
+        using the print_symbol character.
 
         Returns:
             str: A string representation of the rectangle.
@@ -101,7 +101,8 @@ class Rectangle:
         """
         if self.__width == 0 or self.__height == 0:
             return ""
-        return "\n".join("#" * self.__width for _ in range(self.__height))
+        row = str(self.print_symbol) * self.__width
+        return "\n".join([row] * self.__height)
 
     def __repr__(self):
         """
