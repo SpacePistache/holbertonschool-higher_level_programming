@@ -1,12 +1,5 @@
 #!/usr/bin/python3
 def lookup(obj):
-    """
-    Returns the list of available attributes and methods of an object.
 
-    Args:
-        obj: The object to inspect.
-
-    Returns:
-        List of attributes and methods available in the object.
-    """
-    return dir(obj)
+    """Returns a list of available attributes and methods of an object."""
+    return list(obj.__dict__.keys()) if hasattr(obj, '__dict__') else []
