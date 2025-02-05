@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-"""Module calculating geometric shape area w/error
-   error messages in case of invalid input
+"""Module for geometric shape validation and area calculations.
+
+This module contains the BaseGeometry class, which provides methods
+for validating integer inputs and calculating geometric shape areas.
 """
 
 
