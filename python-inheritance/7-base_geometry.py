@@ -8,7 +8,9 @@ class BaseGeometry:
     """Empty class for geometric uses"""
 
     def area(self):
-        """Function calculating area of geometric shapes"""
+        """Function calculating area of geometric shapes
+           Raises exception if the area is not implemented
+        """
 
         raise Exception("area() is not implemented")
 
