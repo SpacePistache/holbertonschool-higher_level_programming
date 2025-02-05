@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" A class that inherits from a list """
+""" A class that inherits from a list and prints the list sorted"""
 
 
 class MyList(list):
