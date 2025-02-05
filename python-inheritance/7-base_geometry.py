@@ -7,13 +7,12 @@ for validating integer inputs and calculating geometric shape areas.
 
 
 class BaseGeometry:
-    """Empty class for geometric uses"""
+    """A class for geometric uses"""
 
     def area(self):
-        """Function calculating area of geometric shapes
-           Raises exception if the area is not implemented
-        """
-
+        """Raises an exception indicating the area method is not implemented.
+    This method is meant to be implemented in subclasses of BaseGeometry.
+    """
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
