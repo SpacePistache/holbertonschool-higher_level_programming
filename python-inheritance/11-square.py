@@ -44,3 +44,36 @@ class Rectangle(BaseGeometry):
         self.integer_validator("height", height)
         self.__width = width
         self.__height = height
+
+    def area(self):
+        """Calculate area of the rectangle
+
+        Returns:
+            int: The area of the rectangle
+        """
+        return self.__width * self.__height
+
+    def __str__(self):
+        """Return string representation of the rectangle
+
+        Returns:
+            str: String in the format [Rectangle] <width>/<height>
+        """
+        return f"[Rectangle] {self.__width}/{self.__height}"
+
+
+class Square(Rectangle):
+    """Square class that inherits from Rectangle"""
+
+    def __init__(self, size):
+        """Initialize Square instance
+
+        Args:
+            size (int): size of the square
+        """
+        self.integer_validator("size", size)
+        super().__init__(size, size)
+        self.__size = size
+
+    def __str__(self):
+        """Return string representation of the square"""
