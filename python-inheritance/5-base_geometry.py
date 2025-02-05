@@ -3,4 +3,5 @@
 
 
 class BaseGeometry:
+    """Empty class for geometric uses"""
     pass
