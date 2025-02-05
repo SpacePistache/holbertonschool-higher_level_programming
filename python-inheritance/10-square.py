@@ -63,7 +63,7 @@ class Rectangle(BaseGeometry):
 
 
 class Square(Rectangle):
-    """Square class that inherits from Rectangle"""
+    """Square class that inherits from Rectangle, has for equal sides"""
 
     def __init__(self, size):
         """Initialize Square instance
