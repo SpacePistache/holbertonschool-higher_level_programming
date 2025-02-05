@@ -1,16 +1,75 @@
->>> from 7-base_geometry import BaseGeometry
+# 7-base_geometry.txt
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 >>> bg = BaseGeometry()
 
-# Test for valid integer_validator calls
+# Test for correct integer inputs
 >>> bg.integer_validator("width", 10)
+
 >>> bg.integer_validator("height", 5)
 
-# Test for invalid integer_validator calls
->>> bg.integer_validator("width", "10")
+# Test for string input (should raise TypeError)
+>>> try:
+...     bg.integer_validator("width", "10")
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
 [TypeError] width must be an integer
 
->>> bg.integer_validator("height", -5)
+# Test for negative integer (should raise ValueError)
+>>> try:
+...     bg.integer_validator("height", -5)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
 [ValueError] height must be greater than 0
 
->>> bg.integer_validator("depth", 0)
+# Test for zero (should raise ValueError)
+>>> try:
+...     bg.integer_validator("depth", 0)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
 [ValueError] depth must be greater than 0
+
+# Test area method (should raise Exception)
+>>> try:
+...     bg.area()
+... except Exception as e:
+...     print("{}".format(e))
+area() is not implemented
+
+# Additional edge cases to test
+>>> try:
+...     bg.integer_validator("age", None)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] age must be an integer
+
+>>> try:
+...     bg.integer_validator("age", [3])
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] age must be an integer
+
+>>> try:
+...     bg.integer_validator("age", (4,))
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] age must be an integer
+
+>>> try:
+...     bg.integer_validator("age", {3, 4})
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] age must be an integer
+
+# Test missing arguments
+>>> try:
+...     bg.integer_validator()
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+>>> try:
+...     bg.integer_validator("age")
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] integer_validator() missing 1 required positional argument: 'value'
