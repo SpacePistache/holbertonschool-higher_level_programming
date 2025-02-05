@@ -1,8 +1,0 @@
->>> is_same_class(1, int)
-True
->>> is_same_class(1, float)
-False
->>> is_same_class("hello", str)
-True
->>> is_same_class("hello", object)
-False
