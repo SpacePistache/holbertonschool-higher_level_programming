@@ -1,6 +1,5 @@
->>> import importlib
->>> 7_base_geometry = importlib.import_module('7-base_geometry')
->>> bg = 7_base_geometry.BaseGeometry()
+>>> from 7-base_geometry import BaseGeometry
+>>> bg = BaseGeometry()
 
 # Test for valid integer_validator calls
 >>> bg.integer_validator("width", 10)
