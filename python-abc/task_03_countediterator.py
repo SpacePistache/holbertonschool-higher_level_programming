@@ -18,7 +18,7 @@ class CountedIterator:
         """Moves on to next item and counts"""
         try:
             item = next(self.iterator)
-            self.count += 1
+            self.index += 1
             return item
         except StopIteration:
             raise
