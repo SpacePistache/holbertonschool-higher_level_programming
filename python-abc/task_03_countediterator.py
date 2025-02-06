@@ -3,12 +3,12 @@
 
 
 class CountedIterator:
-    """An iterator that counts iterations"""
+    """An iterator that counts iterations."""
 
     def __init__(self, iteration):
         """Initialization of iteration counter"""
         self.iterator = iter(iteration)
-        self.index = 0
+        self.count = 0  # Changed from self.index to self.count
 
     def __iter__(self):
         """Returns self as iterable"""
@@ -18,12 +18,11 @@ class CountedIterator:
         """Moves on to next item and counts"""
         try:
             item = next(self.iterator)
-            self.index += 1
+            self.count += 1
             return item
         except StopIteration:
             raise
 
-
-def get_count(self):
-    """Return the total number of items iterated over."""
-    return self.count
+    def get_count(self):
+        """Return the total number of items iterated over."""
+        return self.count
