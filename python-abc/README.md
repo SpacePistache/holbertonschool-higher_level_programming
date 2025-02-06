@@ -1,0 +1,1 @@
+ABC: This module will examine Abstract Classes, interfaces and Subclassing. It sounds really hard..
