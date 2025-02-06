@@ -35,7 +35,7 @@ class FlyingFish(Fish, Bird):
 
     def swim(self):
         """It's not a Russian nuclear submarine"""
-        print("The flying fish is swimming")
+        print("The flying fish is swimming!")
 
     def habitat(self):
         """The flying fish doesn't compromise, it lives wherever it wants!"""
