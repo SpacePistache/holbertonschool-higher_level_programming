@@ -31,7 +31,7 @@ class FlyingFish(Fish, Bird):
 
     def fly(self):
         """Is it a bird, is it a plane!?"""
-        print("The FlyingFish is soaring!")
+        print("The flying fish is soaring!")
 
     def swim(self):
         """It's not a Russian nuclear submarine"""
@@ -41,10 +41,11 @@ class FlyingFish(Fish, Bird):
         """The flying fish doesn't compromise, it lives wherever it wants!"""
         print("The flying fish lives both in water and the sky!")
 
+
 if __name__ == "__main__":
     flying_fish = FlyingFish()
     flying_fish.swim()
     flying_fish.fly()
     flying_fish.habitat()
-    
+
     print(FlyingFish.mro())
