@@ -48,4 +48,4 @@ if __name__ == "__main__":
     flying_fish.fly()
     flying_fish.habitat()
 
-    print(FlyingFish.mro())
+    print([cls.__name__ for cls in FlyingFish.mro()])
