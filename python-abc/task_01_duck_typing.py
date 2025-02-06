@@ -48,7 +48,7 @@ class Rectangle(Shape):
         """Calculates the perimeter of Rectangliest of Rectangles"""
         return 2 * (self.width + self.height)
 
-def Shape_info(shape):
+def shape_info(shape):
     """Area and perimeter of Rectangle and Circle."""
     print(f"Area: {shape.area()}")
     print(f"Perimeter: {shape.perimeter()}")
