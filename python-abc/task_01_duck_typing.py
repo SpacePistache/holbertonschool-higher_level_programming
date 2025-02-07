@@ -22,7 +22,7 @@ class Shape(ABC):
 class Circle(Shape):
     """A circle boi, child of Shape class."""
     def __init__(self, radius):
-        self.radius = radius
+        self.radius = abs(radius)
 
     def area(self):
         """Calculates and returns the area of Circle boi."""
