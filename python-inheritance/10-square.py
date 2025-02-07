@@ -4,7 +4,7 @@
 This module contains the BaseGeometry class, which provides methods
 for validating integer inputs and calculating geometric shape areas.
 """
-Rectangle = __import__('8-rectangle').Rectangle
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
