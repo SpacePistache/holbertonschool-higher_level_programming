@@ -8,4 +8,8 @@ class MyList(list):
     def print_sorted(self):
         """ Prints list in ascending order, no OG list modification """
 
-        print(sorted(self))
+        if not isinstance(self, list):
+            raise Exception
+
+        else:
+            print(sorted(self))
