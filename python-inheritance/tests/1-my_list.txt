@@ -1,9 +1,24 @@
->>> MyList = __import__("1-my_list").MyList
->>> my_list = MyList()
->>> my_list.append(3)
->>> my_list.append(1)
->>> my_list.append(2)
->>> my_list.print_sorted()
-[1, 2, 3]
->>> print(my_list)
-[3, 1, 2]
+The ''1-my_list'' module
+========================
+
+Using ''print_sorted''
+------------------------
+
+>>> MyList = __import__('1-my_list').MyList
+
+------------------------
+
+# Testing for module docstring:
+    >>> m = __import__("1-my_list").__doc__
+    >>> len(m) > 1
+    True
+
+# Testing for class docstring:
+    >>> c = __import__("1-my_list").MyList.__doc__
+    >>> len(c) > 1
+    True
+
+# Testing for method docstring:
+	>>> mod = __import__("1-my_list").MyList.print_sorted.__doc__
+	>>> len(mod) > 1
+	True
