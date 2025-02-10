@@ -9,4 +9,4 @@ def write_file(filename="", text=""):
 with open("my_file_0.txt", "r", encoding="utf-8") as file:
     content = file.read()
 print(content)
-file.close() 
+file.close()
