@@ -3,8 +3,10 @@
 
 
 def write_file(filename="", text=""):
+    """A function that opens and reads the text in the .txt file"""
 
-    with open("my_file_0.txt", "r", encoding="utf-8"):
-        content = content.read()
-        print(content)
-    content.close
+
+with open("my_file_0.txt", "r", encoding="utf-8"):
+    content = content.read()
+print(content)
+content.close
