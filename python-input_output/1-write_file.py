@@ -9,7 +9,7 @@ def write_file(filename="", text=""):
             filename: will be that document that is modified.
             text: The text that will be added.
         Returns:
-            None
+            Characters written
     """
 
     with open(filename, "w", encoding="utf-8") as file:
