@@ -8,6 +8,8 @@ def read_file(filename=""):
 
        Args:
            filename: this'll be the file that is accessed and read
+
+        Returns: None
     """
 
 
