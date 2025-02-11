@@ -5,7 +5,7 @@
 import json
 
 
-def save_to_json_file(my_obj, filename):
+def load_from_json_file(filename):
     """A function that allows to do this
 
         Args:
@@ -16,4 +16,4 @@ def save_to_json_file(my_obj, filename):
             The Python object stored in the file.
     """
     with open(filename, "w", encoding="utf-8") as file:
-        json.load(my_obj, file)
+        json.dump(file)
