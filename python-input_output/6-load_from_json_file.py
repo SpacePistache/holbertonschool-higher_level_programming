@@ -13,7 +13,7 @@ def save_to_json_file(my_obj, filename):
             filename: the destination of the object
 
         Return:
-            None
+            The Python object stored in the file.
     """
     with open(filename, "w", encoding="utf-8") as file:
         json.dump(my_obj, file)
