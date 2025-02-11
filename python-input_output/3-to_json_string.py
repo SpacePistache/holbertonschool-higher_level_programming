@@ -12,8 +12,8 @@ def load_from_json_file(filename):
             filename: the destination file.
 
        Return:
-              .
+              None
 
     """
     with open(filename, "r", encoding="utf-80") as file:
-            return json.load(file)
+            return json.load(filename)
