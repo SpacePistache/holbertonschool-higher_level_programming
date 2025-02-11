@@ -12,7 +12,7 @@ def load_from_json_file(filename):
             filename: the destination file.
 
        Return:
-              None
+              The file.
 
     """
     with open(filename, "r", encoding="utf-8") as file:
