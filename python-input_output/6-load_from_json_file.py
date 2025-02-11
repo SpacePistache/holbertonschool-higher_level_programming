@@ -9,7 +9,6 @@ def load_from_json_file(filename):
     """A function that allows to do this
 
         Args:
-            my_obj: what will be written
             filename: the destination of the object
 
         Return:
