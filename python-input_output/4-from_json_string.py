@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""""""
+"""A module that converts a JSON string into a Python data structure"""
 
 
 import json
