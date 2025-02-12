@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 """A module that adds, loads and saves from a previous file"""
 import sys
-from save_to_json_file import save_to_json_file
-from load_from_json_file import load_from_json_file
+save_to_json_file = import_module("5-save_to_json_file").save_to_json_file
+load_from_json_file = import_module("6-load_from_json_file").load_from_json_file
 
 filename = "add_item.json"
-try:
+if exists(filename):
     items = load_from_json_file(filename)
-except FileNotFoundError:
+else:
     items = []
 
 items.extend(sys.argv[1:])
