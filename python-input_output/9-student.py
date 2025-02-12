@@ -4,17 +4,12 @@
 
 class Student:
 
-    def __init(self, first_name, last_name, age):
+    def __init__(self, first_name, last_name, age):
         """Initialization of attributes
         Args:
-            Self: refers to current instance
             first_name: self explanatory.
             last_name: self explanatory.
             age: Also self explanatory.
-
-        Returns:
-             Dictionary containing student information.
-
         """
         self.first_name = first_name
         self.last_name = last_name
