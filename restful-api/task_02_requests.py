@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """A Module printing the posts from JSON holder"""
 
-
 import requests
 import csv
 
@@ -29,12 +28,16 @@ def fetch_and_save_posts():
     if response.status_code == 200:
         posts = response.json()
 
-        filename = "posts.csv"
+        posts_data = [{
+            "id": post["id"],
+            "title": post["title"],
+            "body": post["body"]} for post in posts]
 
+        filename = "posts.csv"
         with open(filename, mode="w", newline="", encoding="utf-8") as file:
             writer = csv.DictWriter(file, fieldnames=["id", "title", "body"])
             writer.writeheader()
-            writer.writerows(posts)
+            writer.writerows(posts_data)
         print(f"Posts saved to {filename}")
     else:
         print("Failed to fetch posts.")
