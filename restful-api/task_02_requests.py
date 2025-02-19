@@ -1,8 +1,10 @@
+#!/usr/bin/python3
 import requests
 import csv
 
 
 def fetch_and_print_posts():
+    """Fetch posts from JSONPlaceholder and print their titles."""
     url = "https://jsonplaceholder.typicode.com/posts"
     response = requests.get(url)
 
@@ -10,7 +12,6 @@ def fetch_and_print_posts():
 
     if response.status_code == 200:
         posts = response.json()
-
         for post in posts:
             print(post["title"])
     else:
@@ -18,6 +19,7 @@ def fetch_and_print_posts():
 
 
 def fetch_and_save_posts():
+    """Fetch posts from JSONPlaceholder and save them as a CSV file."""
     url = "https://jsonplaceholder.typicode.com/posts"
     response = requests.get(url)
 
