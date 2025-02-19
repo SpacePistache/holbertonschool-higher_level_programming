@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""A Module printing the posts from JSON holder"""
+
+
 import requests
 import csv
 
@@ -8,7 +11,7 @@ def fetch_and_print_posts():
     url = "https://jsonplaceholder.typicode.com/posts"
     response = requests.get(url)
 
-    print(f"Status Code: {response.status_code}")
+    print("Status Code:", response.status_code)
 
     if response.status_code == 200:
         posts = response.json()
@@ -32,7 +35,6 @@ def fetch_and_save_posts():
             writer = csv.DictWriter(file, fieldnames=["id", "title", "body"])
             writer.writeheader()
             writer.writerows(posts)
-
         print(f"Posts saved to {filename}")
     else:
         print("Failed to fetch posts.")
