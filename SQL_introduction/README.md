@@ -1,0 +1,1 @@
+In this section of the course, we shall be delving into a deeper analysis of databases and using SQL.
