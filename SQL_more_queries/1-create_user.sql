@@ -1,10 +1,8 @@
--- Drops user to avoid privilege conflicts
-DROP USER IF EXISTS 'user_0d_1'@'localhost';
-
--- Creates a user if inexistant and sets a password
+-- Create the user if it doesn't exist
 CREATE USER IF NOT EXISTS 'user_0d_1'@'localhost' IDENTIFIED BY 'user_0d_1_pwd';
 
---Grants all privileges to user_0d_1 on entire server
+-- Grant all privileges on all databases and tables
 GRANT ALL PRIVILEGES ON *.* TO 'user_0d_1'@'localhost' WITH GRANT OPTION;
 
+-- Apply changes
 FLUSH PRIVILEGES;
