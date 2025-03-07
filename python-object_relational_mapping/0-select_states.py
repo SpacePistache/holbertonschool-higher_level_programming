@@ -16,3 +16,13 @@ if __name__ == "__main__":
         passwd=password,
         db=database
     )
+
+    cursor = db.cursor()
+
+    states = cursor.fetchall()
+
+    for state in states:
+        print(state)
+
+    cursor.close()
+    db.close()
