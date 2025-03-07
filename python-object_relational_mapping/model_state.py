@@ -12,12 +12,12 @@ Base = declarative_base()
 class State(Base):
     """
     Represents a state in a MySQL database.
-    
+
     Attributes:
         id (int): Auto-generated primary key.
         name (str): Name of the state, with max length of 128 characters.
     """
     __tablename__ = 'states'
-    
+
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
     name = Column(String(128), nullable=False)
