@@ -12,7 +12,7 @@ from model_city import City
 
 
 if __name__ == "__main__":
-    # Create engine and session
+
     engine = create_engine(
         f"mysql+mysqldb://{sys.argv[1]}:{sys.argv[2]}@localhost:3306/{sys.argv[3]}",
         pool_pre_ping=True
