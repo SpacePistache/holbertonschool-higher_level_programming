@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 import MySQLdb
 import sys
 
@@ -12,7 +13,7 @@ def main():
     if len(sys.argv) != 5:
         print("Usage: {} <mysql_username> <mysql_password> "
               "<database_name> <state_name>".format(sys.argv[0]))
-        return
+        sys.exit(1)
 
     username, password, database, state_name = sys.argv[1:5]
 
@@ -21,7 +22,7 @@ def main():
                              passwd=password, db=database)
         cursor = db.cursor()
 
-        query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
+        query = "SELECT * FROM states WHERE BINARY name = %s ORDER BY id ASC"
         cursor.execute(query, (state_name,))
 
         results = cursor.fetchall()
