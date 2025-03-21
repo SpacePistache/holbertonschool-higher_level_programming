@@ -17,6 +17,8 @@ def generate_invitations(template_content, attendees):
         if attendee["event_location"]:
             event_location = attendee["event_location"]
         else: "N/A"
+        if not isinstance(template_content, str):
+            print("Template is empty, no output files generated.")
         new_content = template_content.replace("{name}", name)\
             .replace("{event_title}", event_title).replace("{event_date}", event_date)\
             .replace("{event_location}", event_location)
