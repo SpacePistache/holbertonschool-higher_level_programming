@@ -6,4 +6,3 @@ document.addEventListener('DOMContentLoaded', () => {
 	  header.classList.add("red");
 	});
   });
- 
